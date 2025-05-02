@@ -26,6 +26,7 @@ public class GoogleStepDefinitions {
     @Then("User validates the title {string}")
     public void userValidatesTheTitle(String expectedTitle) {
         Assert.assertEquals(ConfigReader.getProperty(expectedTitle), actualTitle);
+        Assert.fail();
     }
 
     @And("User clicks on Google Accept Cookies button")
